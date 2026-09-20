@@ -44,3 +44,7 @@ require("lazy").setup({
   },
   { import = "plugins" },
 }, lazy_config)
+
+-- Carga la interfaz y el tema (chadracula) de NvChad
+dofile(vim.g.base46_cache .. "defaults")
+dofile(vim.g.base46_cache .. "statusline")
