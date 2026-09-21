@@ -48,3 +48,12 @@ require("lazy").setup({
 -- Carga la interfaz y el tema (chadracula) de NvChad
 dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
+
+-- Cargar opciones y mappings centrales de NvChad
+require "nvchad.options"
+require "nvchad.autocmds"
+
+vim.schedule(function()
+  require "nvchad.mappings"
+  require "mappings" -- <-- ESTA LÍNEA ES LA QUE ACTIVA TU lua/mappings.lua
+end)
