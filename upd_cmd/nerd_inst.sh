@@ -1,9 +1,3 @@
-# First Block: NVIM
-mkdir -p ~/.local/opt ~/.local/bincurl -fL https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz -o /tmp/nvim-linux-x86_64.tar.gz
-tar -xzf /tmp/nvim-linux-x86_64.tar.gz -C ~/.local/opt
-ln -sfn ~/.local/opt/nvim-linux-x86_64/bin/nvim ~/.local/bin/nvim
-
-#Second Block: Nerd Font
 bash <<'EOF'
 set -euo pipefail
 
