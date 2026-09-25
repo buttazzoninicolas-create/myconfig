@@ -52,7 +52,7 @@ dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
 
 -- Cargar opciones y mappings centrales de NvChad
-require "nvchad.options"
+require "options"
 require "nvchad.autocmds"
 
 vim.schedule(function()

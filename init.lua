@@ -18,7 +18,9 @@ vim.opt.listchars = { tab = '→ ', trail = '•' }
 
 -- Bootstrap de lazy.nvim
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
-if not vim.uv.fs_stat(lazypath) then
+local uv = vim.uv or vim.loop
+
+if not uv.fs_stat(lazypath) then
   local repo = "https://github.com/folke/lazy.nvim.git"
   local out = vim.fn.system { "git", "clone", "--filter=blob:none", repo, "--branch=stable", lazypath }
   if vim.v.shell_error ~= 0 then
@@ -50,7 +52,7 @@ dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
 
 -- Cargar opciones y mappings centrales de NvChad
-require "nvchad.options"
+require "options"
 require "nvchad.autocmds"
 
 vim.schedule(function()

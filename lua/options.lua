@@ -1,16 +1,13 @@
 require "nvchad.options"
 -- add yours here!
-vim.opt.timeoutlen = 300  -- El valor está en milisegundos
 
--- local o = vim.o
--- o.cursorlineopt ='both' -- to enable cursorline!
---
---
 local opt = vim.opt
 
+opt.timeoutlen = 300  -- El valor está en milisegundos
 opt.tabstop = 4
 opt.softtabstop = 4
 opt.shiftwidth = 4
 opt.expandtab = false
+
 opt.list = true
 opt.listchars = { tab = '↳ ', trail = '•' }
