@@ -1,3 +1,8 @@
+vim.api.nvim_set_hl(0, "IblChar", {
+    fg = "#666666",
+    nocombine = true,
+})
+
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
 vim.g.mapleader = " "
 vim.opt.termguicolors = true
